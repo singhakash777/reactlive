@@ -23,7 +23,7 @@ const Covid = () =>{
     return(   
         <>
          <div className="my-5">
-            <h1 className="text-center"> Covid  Statstics</h1>
+            <h4 className="text-center"> Covid  Statstics</h4>
         </div>
         {
             !model.length ? (<p> No  data  </p>): (

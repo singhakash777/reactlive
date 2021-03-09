@@ -22,13 +22,17 @@ const Weather = () =>{
     },[search]);
    
     
-    return(      
+    return( 
+        <>
+        <div className="my-5">
+            <h4 className="text-center"> Weather  search</h4>
+        </div>
 
         <div className="col-md-4 col-10 mx-auto ">
-            <div className="card my-5" >                    
+            <div className="card border-3 my-5" style={{backgroundColor:"aliceblue"}} >                    
                     <div className="container-fluid">
-                            <span class="icon"><i class="fa fa-search"></i></span>                       
-                            <input type="search"
+                                                 
+                            <input type="search" className="my-4 mx-auto "
                                 value={search}                                
                                   onChange={(event) => {setSearch(event.target.value)}}></input>
                         
@@ -42,8 +46,8 @@ const Weather = () =>{
                                              <h5> location: {search} </h5>
                                              <h5> Min Temp: {model.temp_min}  Cel</h5>
                                              <h5> Max Temp: {model.temp_max}  Cel</h5>
-                                             <h5> Pressure: {model.pressure}  Cel</h5>
-                                             <h5> humidity: {model.humidity}  Cel</h5>
+                                             <h5> Pressure: {model.pressure} hPa </h5>
+                                             <h5> humidity: {model.humidity}  % </h5>
                                         </div>
                                     </div>
                              )
@@ -54,6 +58,8 @@ const Weather = () =>{
             </div>                            
         </div>
        
+        </>     
+        
     );
 }
 
